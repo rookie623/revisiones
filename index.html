@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD VMs</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#">Pricing</a>
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <h1 class="text-center mb-4">Agregar VMs</h1>
+    <form id="crudForm">
+      <div class="form-group">
+        <label for="nombreVM">Nombre de VM:</label>
+        <input type="text" class="form-control" id="nombreVM" required>
+      </div>
+      <div class="form-group">
+        <label for="ipAcceso">IP de Acceso:</label>
+        <input type="text" class="form-control" id="ipAcceso" required>
+      </div>
+      <div class="form-group">
+        <label for="sistemaOperativo">Sistema Operativo:</label>
+        <select class="form-select" id="os">
+          <option selected>Choose...</option>
+          <option value="Windows 7">Windows 7</option>
+          <option value="Windows 8">Windows 8</option>
+          <option value="Windows 8.1">Windows 8.1</option>
+          <option value="Windows 10">Windows 10</option>
+          <option value="Windows Server 2003">Windows Server 2003</option>
+          <option value="Windows Server 2003">Windows Server 2003</option>
+          <option value="Windows Server 2008 R2">Windows Server 2008 R2</option>
+          <option value="Windows Server 2012">Windows Server 2012</option>
+          <option value="Windows Server 2012 R2">Windows Server 2012 R2</option>
+          <option value="Windows Server 2016">Windows Server 2016</option>
+          <option value="Windows Server 2019">Windows Server 2019</option>
+          <option value="Windows Server 2022">Windows Server 2022</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="datacenter">Datacenter:</label>
+        <input type="text" class="form-control" id="datacenter" required>
+      </div>
+      <div class="form-group">
+        <label for="cluster">Cluster:</label>
+        <input type="text" class="form-control" id="cluster" required>
+      </div>
+      <div class="form-group">
+        <label for="host">Host:</label>
+        <input type="text" class="form-control" id="host" required>
+      </div>
+      <div class="form-group">
+        <label for="estado">Estado (Encendido/Apagado):</label>
+        <select class="form-control" id="estado">
+          <option value="encendido">Encendido</option>
+          <option value="apagado">Apagado</option>
+        </select>
+      </div>
+      <div class="form-group row align-items-start">
+        <label for="estado">Discos:</label>
+          <div class="col-sm-3">
+            <label class="visually-hidden" for="specificSizeInputName">Capacidad</label>
+            <input type="number" class="form-control" id="capacidad" placeholder="Capacidad">
+          </div>
+          <div class="col-sm-3">
+            <label class="visually-hidden" for="specificSizeInputName">Ocupado</label>
+            <input type="number" class="form-control" id="ocupado" placeholder="Ocupado">
+          </div>
+          <div class="col-sm-3">
+            <label class="visually-hidden" for="specificSizeSelect">Letra de Unidad</label>
+            <select class="form-select" id="letra">
+              <option selected>Choose...</option>
+              <option value="A">A</option>
+              <option value="B">B</option>
+              <option value="C">C</option>
+              <option value="D">D</option>
+              <option value="E">E</option>
+              <option value="F">F</option>
+              <option value="G">G</option>
+              <option value="H">H</option>
+              <option value="I">I</option>
+              <option value="J">J</option>
+              <option value="K">K</option>
+              <option value="L">L</option>
+              <option value="M">M</option>
+              <option value="N">N</option>
+              <option value="O">O</option>
+              <option value="P">P</option>
+              <option value="Q">Q</option>
+              <option value="R">R</option>
+              <option value="S">S</option>
+              <option value="T">T</option>
+              <option value="U">U</option>
+              <option value="V">V</option>
+              <option value="W">W</option>
+              <option value="X">X</option>
+              <option value="Y">Y</option>
+              <option value="Z">Z</option>
+            </select>
+          </div>
+          <div class="col-auto">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
+              <label class="form-check-label" for="autoSizingCheck2">
+                Disco de sistema
+              </label>
+            </div>
+          </div>
+      </div>
+      <div class="form-group"><a class="btn btn-primary" id="agregarDisco">Agregar disco</a></div>
+        
+        <div class="form-group" >
+          <ul class="list-group" id="listaDiscos">
+          </ul>
+        </div>
+      <div class="form-group">
+        <label for="windowsUpdate">Windows Update:</label>
+        <input type="text" class="form-control" id="windowsUpdate" required>
+      </div>
+      <div class="form-group">
+        <label for="logAplicaciones">Log de Aplicaciones:</label>
+        <input type="text" class="form-control" id="logAplicaciones" required>
+      </div>
+      <div class="form-group">
+        <label for="fechaChequeo">Fecha del Chequeo:</label>
+        <input type="date" class="form-control" id="fechaChequeo" required>
+      </div>
+      <div class="form-group">
+        <label for="comentarios">Comentarios:</label>
+        <textarea class="form-control" id="comentarios" rows="3"></textarea>
+      </div>
+      <div class="form-group">
+        <label for="imagen">Adjuntar Imagen:</label>
+        <input type="file" class="form-control-file" id="imagen" accept="image/*">
+        <small id="imagenHelp" class="form-text text-muted">Selecciona una imagen para adjuntar.</small>
+      </div>      
+      <button type="submit" class="btn btn-primary">Agregar</button>
+    </form>
+    <hr>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Nombre de VM</th>
+          <th>IP de Acceso</th>
+          <th>Sistema Operativo</th>
+          <th>Datacenter</th>
+          <th>Cluster</th>
+          <th>Host</th>
+          <th>Estado</th>
+          <th>Espacio de Disco</th>
+          <th>Windows Update</th>
+          <th>Log de Aplicaciones</th>
+          <th>Fecha del Chequeo</th>
+          <th>Comentarios</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tablaVMs">
+      </tbody>
+    </table>
+  </div>
+  <script src="./index.js"></script>
+</body>
+</html>

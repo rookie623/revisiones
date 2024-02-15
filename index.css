@@ -1,0 +1,28 @@
+body {
+    padding-top: 20px;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .btn {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+  
+  .table th,
+  .table td {
+    padding: 8px;
+    vertical-align: top;
+  }
+  
+  .btn-group {
+    margin-right: 5px;
+  }
+  
