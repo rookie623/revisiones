@@ -1,54 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>CRUD de Discos</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <link rel="stylesheet" type="text/css" href="styles.css" />
 </head>
+
 <body>
-    <div class="container">
-        <h1 class="text-center mb-4">CRUD de Discos</h1>
-        <form id="discoForm">
-          <div class="form-group">
-            <label for="capacidad">Capacidad (GB):</label>
-            <input type="number" class="form-control" id="capacidad" required>
-          </div>
-          <div class="form-group">
-            <label for="espacioOcupado">Espacio Ocupado (GB):</label>
-            <input type="number" class="form-control" id="espacioOcupado" required>
-          </div>
-          <div class="form-group">
-            <label for="nombre">Nombre:</label>
-            <input type="text" class="form-control" id="nombre">
-          </div>
-          <div class="form-group">
-            <label for="letraUnidad">Letra de Unidad:</label>
-            <select class="form-control" id="letraUnidad" required>
-              <option value="">Selecciona una letra</option>
-            </select>
-          </div>
-          <button type="submit" class="btn btn-primary" id="agregarDisco">Agregar Disco</button>
-          <a href="../index.html" class="btn btn-secondary" id="vovler">Volver</a>
-        </form>
-        <hr>
-        <table class="table">
-          <thead>
-            <tr>
-              <th>Capacidad (GB)</th>
-              <th>Espacio Ocupado (GB)</th>
-              <th>Espacio Disponible (GB)</th>
-              <th>Nombre</th>
-              <th>Letra de Unidad</th>
-              <th>Acciones</th>
-            </tr>
-          </thead>
-          <tbody id="tablaDiscos">
-          </tbody>
-        </table>
+  <div class="container">
+    <h1 class="text-center mb-4">CRUD de Discos</h1>
+    <form id="discoForm">
+      <div class="form-group">
+        <label for="capacidad">Capacidad (GB):</label>
+        <input type="number" class="form-control" id="capacidad" required />
       </div>
-      <script src="./disos.js"></script>
-      
+      <div class="form-group">
+        <label for="espacioOcupado">Espacio Ocupado (GB):</label>
+        <input type="number" class="form-control" id="espacioOcupado" required />
+      </div>
+      <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" class="form-control" id="nombre" />
+      </div>
+      <div class="form-group">
+        <label for="letraUnidad">Letra de Unidad:</label>
+        <select class="form-control" id="letraUnidad" required>
+          <option value="">Selecciona una letra</option>
+        </select>
+      </div>
+      <button type="submit" class="btn btn-primary" id="agregarDisco">
+        Agregar Disco
+      </button>
+      <a href="../index.html" class="btn btn-secondary" id="vovler">Volver</a>
+    </form>
+    <hr />
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Capacidad (GB)</th>
+          <th>Espacio Ocupado (GB)</th>
+          <th>Espacio Disponible (GB)</th>
+          <th>Nombre</th>
+          <th>Letra de Unidad</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tablaDiscos"></tbody>
+    </table>
+  </div>
+  <script src="./disos.js"></script>
 </body>
+
 </html>
